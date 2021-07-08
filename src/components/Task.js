@@ -8,6 +8,7 @@ import {
 // Components
 import TaskForm from './TaskForm';
 import TaskItem from './TaskItem';
+import ClearButton from './Button/ClearButton';
 
 const Task = () => {
 
@@ -26,6 +27,7 @@ const Task = () => {
 
     return (
         <>
+            <ClearButton clearTasks={()=>{}} count={4} />
             <TaskForm />
             {tasks.loading && 'Loading...'}
             {tasks && tasks.tasks?.map((task, index) => (

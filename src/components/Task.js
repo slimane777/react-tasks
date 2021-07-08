@@ -8,8 +8,7 @@ import {
 // Components
 import TaskForm from './TaskForm';
 import TaskItem from './TaskItem';
-import ClearButton from './Button/ClearButton';
-import HeaderDate from './Date/HeaderDate';
+import Header from './Header/Header';
 
 const Task = () => {
 
@@ -28,8 +27,7 @@ const Task = () => {
 
     return (
         <>
-            <HeaderDate/>
-            <ClearButton clearTasks={()=>{}} count={4} />
+            <Header />
             <TaskForm />
             {tasks.loading && 'Loading...'}
             {tasks && tasks.tasks?.map((task, index) => (

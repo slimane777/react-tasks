@@ -1,24 +1,21 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Button, Wrapper } from './styles'
 import TasksCount from './TasksCount';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
-const ClearButton = ({ clearTasks }) => {
+const ClearButton = () => {
 
   const count = useSelector((state) => state.tasks.tasks)
+  const dispatch = useDispatch()
+
   return (
     <Wrapper>
       <TasksCount count={count.length} />
-      <Button onClick={() => clearTasks()}>
+      <Button onClick={() => dispatch()}>
           Clear List
       </Button>
     </Wrapper>
   )
-}
-
-ClearButton.propTypes = {
-  clearTasks: PropTypes.func.isRequired,
 }
 
 export default ClearButton;

@@ -18,9 +18,11 @@ export const Month = styled.p`
     font-weight: 600;
     color: #8683a0;
     opacity: 0.8;
+    margin-top: 5px;
 `;
 
 export const Wrapper = styled.div`
     text-align: left;
     width: fit-content;
+    flex: 1;
 `;

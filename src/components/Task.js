@@ -9,6 +9,7 @@ import {
 import TaskForm from './TaskForm';
 import TaskItem from './TaskItem';
 import ClearButton from './Button/ClearButton';
+import HeaderDate from './Date/HeaderDate';
 
 const Task = () => {
 
@@ -27,6 +28,7 @@ const Task = () => {
 
     return (
         <>
+            <HeaderDate/>
             <ClearButton clearTasks={()=>{}} count={4} />
             <TaskForm />
             {tasks.loading && 'Loading...'}

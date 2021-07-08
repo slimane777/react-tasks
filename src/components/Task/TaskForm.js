@@ -5,7 +5,7 @@ import {
   SET_TASK_TITLE_REQUESTED,
   CREATE_TASK_REQUESTED
 } from '../../redux/actions/tasks'
-import { Wrapper, Input, Button } from './styles'
+import { InputWrapper, Input, Button } from './styles'
 import { FiPlus, FiCheck } from "react-icons/fi";
 
 const TaskForm = () => {
@@ -29,7 +29,7 @@ const TaskForm = () => {
   return (
     
       <form onSubmit={onSubmit}>
-        <Wrapper>
+        <InputWrapper>
           <FiPlus size={30} color={'#8683a0'} />
           <Input 
             type="text" 
@@ -43,7 +43,7 @@ const TaskForm = () => {
           </Button>
           }
           
-        </Wrapper>
+        </InputWrapper>
       </form>
   )
 }

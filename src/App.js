@@ -3,7 +3,7 @@ import './App.css';
 import { Provider } from 'react-redux'
 import store from './redux/store';
 // Components
-import Task from './components/Task';
+import Task from './components/Task/Task';
 
 const App = () => {
   return (

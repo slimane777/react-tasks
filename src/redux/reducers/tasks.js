@@ -47,7 +47,7 @@ import {
       case CLEAR_TASK_TITLE:
         return {
           ...state,
-      title: ''
+            title: ''
         }
       // Delete existed TASK
       case DELETE_TASK:

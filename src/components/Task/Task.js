@@ -4,11 +4,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import {
   GET_TASKS_REQUESTED,
   DELETE_TASK_REQUESTED
-} from '../redux/actions/tasks';
+} from '../../redux/actions/tasks';
 // Components
-import TaskForm from './Task/TaskForm';
+import TaskForm from './TaskForm';
 import TaskItem from './TaskItem';
-import Header from './Header/Header';
+import Header from '../Header/Header';
+import { Container } from './styles'
 
 const Task = () => {
 
@@ -26,14 +27,14 @@ const Task = () => {
     const deleteTask = (id) => dispatch({ type: DELETE_TASK_REQUESTED, payload: id })
 
     return (
-        <>
+        <Container>
             <Header />
             <TaskForm />
             {tasks.loading && 'Loading...'}
             {tasks && tasks.tasks?.map((task, index) => (
                 <TaskItem task={task} key={index} deleteTask={deleteTask} />
             ))}
-        </>
+        </Container>
     )
 }
 

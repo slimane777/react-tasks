@@ -1,10 +1,19 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const InputWrapper = styled.div`
     display: flex;
     padding: 20px;
     margin-top: 5px;
     border-bottom: 1px solid #80808029;
+`;
+
+export const Container = styled.div`
+    border-radius: 8px;
+    background-color: white;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 100px;
+    overflow: hidden
 `;
 
 export const Input = styled.input`

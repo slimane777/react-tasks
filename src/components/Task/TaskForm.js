@@ -1,20 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-// bring connect from react-redux, it's the bridge for connecting component to redux
 import { useSelector, useDispatch } from 'react-redux'
-
-// bring the actions, just bring that have REQUESTED in the suffix
-// If you dispatching that doesn't have REQUESTED, it will not work
 import {
   SET_TASK_TITLE_REQUESTED,
   CREATE_TASK_REQUESTED
-} from '../redux/actions/tasks'
+} from '../../redux/actions/tasks'
+import { Wrapper, Input, Button } from './styles'
+import { FiPlus, FiCheck } from "react-icons/fi";
 
 const TaskForm = () => {
 
     const title = useSelector((state) => state.title);
-    
+
     const dispatch = useDispatch();
 
     const setTaskTitle = (title) => dispatch({ type: SET_TASK_TITLE_REQUESTED, payload: title });
@@ -30,15 +27,24 @@ const TaskForm = () => {
   }
 
   return (
-    <form onSubmit={onSubmit}>
-      <input 
-	type="text" 
-	placeholder="What needs to be done..." 
-	onChange={onChange}
-	value={title}
-      />
-      <button type="submit">Submit</button>
-    </form>
+    
+      <form onSubmit={onSubmit}>
+        <Wrapper>
+          <FiPlus size={30} color={'#8683a0'} />
+          <Input 
+            type="text" 
+            placeholder="Type your task" 
+            onChange={onChange}
+            value={title}
+          />
+          {
+            !!title && <Button type="submit">
+            <FiCheck size={30} color={'#3dd272'} />
+          </Button>
+          }
+          
+        </Wrapper>
+      </form>
   )
 }
 

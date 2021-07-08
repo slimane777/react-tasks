@@ -6,7 +6,7 @@ import {
   DELETE_TASK_REQUESTED
 } from '../redux/actions/tasks';
 // Components
-import TaskForm from './TaskForm';
+import TaskForm from './Task/TaskForm';
 import TaskItem from './TaskItem';
 import Header from './Header/Header';
 

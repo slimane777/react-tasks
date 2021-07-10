@@ -3,6 +3,7 @@ import {
     GET_TASKS,
     SET_TASK_TITLE,
     CREATE_TASK,
+    UPDATE_TASK,
     DELETE_TASK,
     CLEAR_TASK_TITLE
   } from '../actions/tasks'
@@ -42,6 +43,12 @@ import {
       ...state,
       tasks: [payload, ...state.tasks],
       loading: false
+        }
+      // update TASK
+      case UPDATE_TASK:
+        return {
+      ...state,
+      tasks: [payload, ...state.tasks],
         }
       // Clear TASK title in form after creating a new one
       case CLEAR_TASK_TITLE:

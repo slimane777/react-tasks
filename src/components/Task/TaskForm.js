@@ -10,7 +10,7 @@ import { FiPlus, FiCheck } from "react-icons/fi";
 
 const TaskForm = () => {
 
-    const title = useSelector((state) => state.title);
+    const title = useSelector((state) => state.tasks.title);
 
     const dispatch = useDispatch();
 
@@ -18,6 +18,8 @@ const TaskForm = () => {
     const createTask = (title) => dispatch({ type: CREATE_TASK_REQUESTED, payload: title });
 
   const onChange = (e) => {
+    console.log({e})
+    console.log(e.target.value)
     setTaskTitle(e.target.value)
   }
 

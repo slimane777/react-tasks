@@ -31,7 +31,7 @@ const Task = () => {
             <Header />
             <TaskForm />
             {tasks.loading && 'Loading...'}
-            {tasks && tasks.tasks?.map((task, index) => (
+            {tasks && tasks?.tasks?.map((task, index) => (
                 <TaskItem task={task} key={index} deleteTask={deleteTask} />
             ))}
         </Container>

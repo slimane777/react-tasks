@@ -15,6 +15,8 @@ import {
     CLEAR_TASK_TITLE,
     CREATE_TASK,
     CREATE_TASK_REQUESTED,
+    UPDATE_TASK,
+    UPDATE_TASK_REQUESTED,
     DELETE_TASK,
     DELETE_TASK_REQUESTED
   } from '../actions/tasks'
@@ -23,6 +25,7 @@ import {
   import {
     getAllTasks,
     createNewTask,
+    updateExistingTask,
     deleteExistedTask
   } from '../api/tasks'
   
@@ -53,6 +56,15 @@ import {
     // Clear TASK after creating
     yield put({ type: CLEAR_TASK_TITLE })
   }
+
+    // Update TASK
+    function* updateTask({ payload }) {
+      
+        const updatedTask = yield call(updateExistingTask, payload)
+      
+        yield put({ type: UPDATE_TASK, payload: updatedTask })
+
+    }
   
   // Delete TASK
   function* deleteTask({ payload }) {
@@ -68,5 +80,6 @@ import {
     yield takeEvery(GET_TASKS_REQUESTED, getTasks)
     yield takeEvery(SET_TASK_TITLE_REQUESTED, setTaskTitle)
     yield takeLatest(CREATE_TASK_REQUESTED, createTask)
+    yield takeLatest(UPDATE_TASK_REQUESTED, updateTask)
     yield takeEvery(DELETE_TASK_REQUESTED, deleteTask)
   }

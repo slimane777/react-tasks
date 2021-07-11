@@ -60,9 +60,9 @@ import {
     // Update TASK
     function* updateTask({ payload }) {
       
-        const updatedTask = yield call(updateExistingTask, payload)
+        yield call(updateExistingTask, payload)
       
-        yield put({ type: UPDATE_TASK, payload: updatedTask })
+        // yield put({ type: UPDATE_TASK, payload: updatedTask })
 
     }
   

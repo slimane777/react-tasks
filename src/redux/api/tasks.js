@@ -35,7 +35,6 @@ export const createNewTask = async (title) => {
 
 // Update  Task
 export const updateExistingTask = async (taskObj) => {
-    console.log({taskObj})
   try {
     const task = await axios.put('tasks/'+taskObj.id, {
         title: taskObj.title,
@@ -43,7 +42,8 @@ export const updateExistingTask = async (taskObj) => {
         dateOfComplete: taskObj.dateOfComplete
     })
     console.log({task})
-    // getAllTasks()
+    console.log({task})
+    getAllTasks()
     return task.data
   } catch(err) {
     return console.error({err})

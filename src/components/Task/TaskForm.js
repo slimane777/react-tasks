@@ -8,7 +8,7 @@ import {
 import { InputWrapper, Input, Button } from './styles'
 import { FiPlus, FiCheck } from "react-icons/fi";
 
-const TaskForm = () => {
+function TaskForm() {
 
     const title = useSelector((state) => state.tasks.title);
 
@@ -32,7 +32,7 @@ const TaskForm = () => {
     
       <form onSubmit={onSubmit}>
         <InputWrapper>
-          <FiPlus size={30} color={'#8683a0'} />
+          <FiPlus size={28} color={'#8683a0'} />
           <Input 
             type="text" 
             placeholder="Type your task" 
@@ -41,7 +41,7 @@ const TaskForm = () => {
           />
           {
             !!title && <Button type="submit">
-            <FiCheck size={30} color={'#3dd272'} />
+            <FiCheck size={25} color={'#3dd272'} />
           </Button>
           }
           

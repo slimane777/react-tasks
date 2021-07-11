@@ -16,7 +16,7 @@ import {
   }
   
   // This export default will control your state for your application
-  export default(state = initialState, {type, payload}) => {
+ const taskReducer = (state = initialState, {type, payload}) => {
     switch(type) {
       // Set loading
       case SET_LOADING:
@@ -68,3 +68,5 @@ import {
         return state
     }
   }
+
+  export default taskReducer

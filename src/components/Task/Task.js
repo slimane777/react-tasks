@@ -11,27 +11,36 @@ import TaskItem from './TaskItem';
 import Header from '../Header/Header';
 import { Container } from './styles'
 
-const Task = () => {
+function Task() {
 
     const tasks = useSelector((state) => state.tasks);
     
     const dispatch = useDispatch();
 
+    const deleteTask = (id) => dispatch({ type: DELETE_TASK_REQUESTED, payload: id })
+
     useEffect(() => {
         console.log({tasks})
+        const getTasks = () => dispatch({ type: GET_TASKS_REQUESTED })
         getTasks()
     }, [])
 
-    const getTasks = () => dispatch({ type: GET_TASKS_REQUESTED })
-
-    const deleteTask = (id) => dispatch({ type: DELETE_TASK_REQUESTED, payload: id })
+    function compare( a, b ) {
+        if ( a.id < b.id ){
+          return -1;
+        }
+        if ( a.id > b.id ){
+          return 1;
+        }
+        return 0;
+    }
 
     return (
         <Container>
             <Header />
             <TaskForm />
             {tasks.loading && 'Loading...'}
-            {tasks && tasks?.tasks?.map((task, index) => (
+            {tasks && tasks?.tasks?.sort(compare)?.map((task, index) => (
                 <TaskItem task={task} key={index} deleteTask={deleteTask} />
             ))}
         </Container>
@@ -41,8 +50,6 @@ const Task = () => {
 Task.propTypes = {
   loading: PropTypes.bool,
   tasks: PropTypes.array,
-//   getTasks: PropTypes.func.isRequired,
-//   deleteTask: PropTypes.func.isRequired
 }
 
 export default Task

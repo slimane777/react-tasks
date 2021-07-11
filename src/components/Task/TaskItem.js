@@ -1,25 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { TaskRow, TaskCheckBox, TaskLabel, TaskTime, CheckboxContainer, HiddenCheckbox, StyledCheckbox, Icon } from './styles'
+import { TaskRow, TaskLabel, TaskTime, CheckboxContainer, StyledCheckbox, Icon } from './styles'
 import { useDispatch } from 'react-redux'
 import moment from 'moment'
 import {
   UPDATE_TASK_REQUESTED
 } from '../../redux/actions/tasks'
 
-const TaskItem = ({ task }) => {
+function TaskItem({ task }) {
 
   const dispatch = useDispatch()
+
+  const [isChecked, setIsChecked] = useState(task.completed ? task.completed : false)
 
   const updateTask = (taskObj) => dispatch({ type: UPDATE_TASK_REQUESTED, payload: taskObj });
 
   return (
-    // <TaskRow onClick={()=>updateTask({id: task.id, title: task.title, completed: !task.completed, dateOfComplete: moment(new Date())})}>
     <TaskRow 
-      onClick={(e)=>{
-        console.log({e})
-        console.log({task})
-        e.preventDefault()
+      onClick={()=>{
+        setIsChecked(!isChecked)
         let obj = {
           id: task.id, 
           title: task.title, 
@@ -30,30 +29,13 @@ const TaskItem = ({ task }) => {
         updateTask(obj)
       }}
     >
-      {/* <TaskCheckBox 
-          type="checkbox"
-          value={task.title}
-          checked={task.completed}
-          onChange={()=>dispatch()}
-      /> */}
 
       <CheckboxContainer >
-        {/* <HiddenCheckbox checked={task.completed} /> */}
         <StyledCheckbox 
-          checked={task.completed ? task.completed : false} 
-          // onChange={(e)=>{
-          //   console.log({e})
-          //   // let obj = {
-          //   //   id: task.id, 
-          //   //   title: task.title, 
-          //   //   completed: !task.completed, 
-          //   //   dateOfComplete: moment(new Date())
-          //   // }
-          //   // updateTask(obj)
-          // }}
+          checked={isChecked} 
         >
           {
-            task.completed &&
+            isChecked &&
             <Icon viewBox="0 0 24 24">
               <polyline points="20 6 9 17 4 12" />
             </Icon>
@@ -61,11 +43,11 @@ const TaskItem = ({ task }) => {
         </StyledCheckbox>
       </CheckboxContainer>
 
-      <TaskLabel checked={task.completed}>
+      <TaskLabel checked={isChecked}>
         {task.title}
       </TaskLabel>
       <TaskTime>
-        {moment(new Date()).format('h:MM a')}
+        {moment(task.dateOfComplete ? task.dateOfComplete : new Date()).format('h:MM a')}
       </TaskTime>
      </TaskRow>
   )

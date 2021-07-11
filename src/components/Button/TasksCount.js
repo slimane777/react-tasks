@@ -11,7 +11,7 @@ const TasksCount = ({ count }) => {
 }
 
 TasksCount.propTypes = {
-    count: PropTypes.func.isRequired
+    count: PropTypes.number.isRequired
 }
 
 export default TasksCount;

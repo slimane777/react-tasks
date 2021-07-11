@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderDate test HeaderDate should match snapshot 1`] = `
+<div
+  className="sc-hKFxyN eUBRzi"
+>
+  <div
+    className="sc-gtsrHT dhDFSK"
+  >
+    <p
+      className="sc-bdnxRM eEyHpk"
+    >
+      Sunday,
+    </p>
+    <p
+      className="sc-bdnxRM jORmTa"
+    >
+       11th
+    </p>
+  </div>
+  <p
+    className="sc-dlnjwi hvNmXd"
+  >
+    July
+  </p>
+</div>
+`;

@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskForm test TaskForm should match snapshot 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="sc-bdnxRM kWHvNM"
+  >
+    <svg
+      color="#8683a0"
+      fill="none"
+      height={30}
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      style={
+        Object {
+          "color": "#8683a0",
+        }
+      }
+      viewBox="0 0 24 24"
+      width={30}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <line
+        x1="12"
+        x2="12"
+        y1="5"
+        y2="19"
+      />
+      <line
+        x1="5"
+        x2="19"
+        y1="12"
+        y2="12"
+      />
+    </svg>
+    <input
+      className="sc-dlnjwi enlKjQ"
+      onChange={[Function]}
+      placeholder="Type your task"
+      type="text"
+    />
+  </div>
+</form>
+`;

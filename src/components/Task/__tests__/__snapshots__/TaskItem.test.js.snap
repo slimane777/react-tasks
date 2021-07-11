@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskItem test TaskItem should match snapshot 1`] = `
+<div
+  className="sc-eCApnc eqSazG"
+  onClick={[Function]}
+>
+  <div
+    className="sc-iCoGMd bCJsug"
+  >
+    <div
+      checked={false}
+      className="sc-gKAaRy lqKOd"
+    />
+  </div>
+  <p
+    className="sc-pNWdM emhvAE"
+  />
+  <span
+    className="sc-jrsJWt kividw"
+  >
+    7:07 pm
+  </span>
+</div>
+`;

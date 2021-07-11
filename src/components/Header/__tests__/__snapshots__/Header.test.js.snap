@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header test Header should match snapshot 1`] = `
+<div
+  className="sc-bdnxRM bMDMPZ"
+>
+  <div
+    className="sc-iCoGMd gtGxzP"
+  >
+    <div
+      className="sc-jSFjdj eieNf"
+    >
+      <p
+        className="sc-eCApnc iFHYB"
+      >
+        Sunday,
+      </p>
+      <p
+        className="sc-eCApnc bghzsz"
+      >
+         11th
+      </p>
+    </div>
+    <p
+      className="sc-gKAaRy ldhcgQ"
+    >
+      July
+    </p>
+  </div>
+  <div
+    className="sc-hKFxyN erUByQ"
+  >
+    <span
+      className="sc-dlnjwi gLYpaE"
+    >
+      0
+       Tasks
+    </span>
+    <p
+      className="sc-gtsrHT kFyifo"
+      onClick={[Function]}
+    >
+      Clear List
+    </p>
+  </div>
+</div>
+`;

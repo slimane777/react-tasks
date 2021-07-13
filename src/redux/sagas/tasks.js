@@ -73,6 +73,8 @@ import {
     const task = yield call(deleteExistedTask, payload)
   
     yield put({ type: DELETE_TASK, payload: task })
+
+    yield put({ type: GET_TASKS, payload: [] })
   }
   
   // Export the saga (task)

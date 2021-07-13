@@ -11,7 +11,15 @@ const ClearButton = () => {
   const count = useSelector((state) => state.tasks.tasks)
   const dispatch = useDispatch()
 
-  const deleteTask = () => dispatch({ type: DELETE_TASK_REQUESTED, payload: 5 });
+  const deleteTask = () => {
+    let ids = []
+
+    count.map((task)=>{
+      ids.push(task.id)
+    })
+
+    dispatch({ type: DELETE_TASK_REQUESTED, payload: ids });
+  }
 
   return (
     <Wrapper>

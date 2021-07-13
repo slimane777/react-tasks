@@ -1,7 +1,6 @@
-import defaultAxios from 'axios'
+import defaultAxios from 'axios';
 
 const axios = defaultAxios.create({
-//   baseURL: 'https://jsonplaceholder.typicode.com/',
   baseURL: 'http://localhost:3000/',
   headers: {'Content-Type': 'application/json'}
 });
@@ -10,8 +9,7 @@ const axios = defaultAxios.create({
 export const getAllTasks = async () => {
   try {
     const tasks = await axios.get('tasks')
-    console.log('let me see')
-    console.log({tasks})
+
     return tasks.data
   } catch(err) {
     return console.error(err)
@@ -26,7 +24,7 @@ export const createNewTask = async (title) => {
         completed: false,
         dateOfComplete: null
     })
-    console.log({task})
+
     return task.data
   } catch(err) {
     return console.error(err)
@@ -47,13 +45,16 @@ export const updateExistingTask = async (taskObj) => {
   }
 }
 
-// Delete existed Task
-export const deleteExistedTask = async (id) => {
-  try {
-      
-    await axios.delete(`tasks/${id}`)
+// Delete existed Tasks
+export const deleteExistedTask = async (ids) => {
+
+    try {
+
+    ids.map(async (id)=>{
+        await axios.delete(`tasks/${id}`)
+    })
     
-    return id
+    return ids
   } catch(err) {
      return console.error({err})
   }

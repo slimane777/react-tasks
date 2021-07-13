@@ -4,16 +4,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+Clone the repos:
+#### git clone https://github.com/slimane777/react-tasks.git
+
 In the project directory, you can run:
 
 To install required packages
-### `yarn`
+#### `yarn`
 
 To run the app
-### `yarn start`
+#### `yarn start`
 
 To run test
-### `yarn test`
+#### `yarn test`
 
 To build the app
-### `yarn build`
+#### `yarn build`

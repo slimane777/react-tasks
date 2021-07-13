@@ -23,7 +23,7 @@ const ClearButton = () => {
 
   return (
     <Wrapper>
-      <TasksCount count={count.length} />
+      <TasksCount count={count?.length} />
       <Button className={'clear'} onClick={() => deleteTask()}>
           Clear List
       </Button>

@@ -16,8 +16,7 @@ export const Row = styled.div`
 export const Month = styled.p`
     font-size: 1em;
     font-weight: 600;
-    color: #8683a0;
-    opacity: 0.8;
+    color: #c0bad2;
     margin-top: 5px;
 `;
 

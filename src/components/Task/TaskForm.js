@@ -32,7 +32,7 @@ function TaskForm() {
     
       <form onSubmit={onSubmit}>
         <InputWrapper>
-          <FiPlus size={28} color={'#8683a0'} />
+          <FiPlus size={28} color={'#c0bad2'} />
           <Input 
             type="text" 
             placeholder="Type your task" 

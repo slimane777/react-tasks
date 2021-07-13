@@ -41,9 +41,6 @@ export const updateExistingTask = async (taskObj) => {
         completed: taskObj.completed,
         dateOfComplete: taskObj.dateOfComplete
     })
-    console.log({task})
-    console.log({task})
-    getAllTasks()
     return task.data
   } catch(err) {
     return console.error({err})
@@ -53,6 +50,7 @@ export const updateExistingTask = async (taskObj) => {
 // Delete existed Task
 export const deleteExistedTask = async (id) => {
   try {
+      
     await axios.delete(`tasks/${id}`)
     
     return id

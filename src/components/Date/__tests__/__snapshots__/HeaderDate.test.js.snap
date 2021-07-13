@@ -10,16 +10,16 @@ exports[`HeaderDate test HeaderDate should match snapshot 1`] = `
     <p
       className="sc-bdnxRM eEyHpk"
     >
-      Sunday,
+      Monday,
     </p>
     <p
       className="sc-bdnxRM jORmTa"
     >
-       11th
+       12th
     </p>
   </div>
   <p
-    className="sc-dlnjwi hvNmXd"
+    className="sc-dlnjwi bkiDZf"
   >
     July
   </p>

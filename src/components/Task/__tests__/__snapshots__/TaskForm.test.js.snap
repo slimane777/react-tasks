@@ -8,20 +8,20 @@ exports[`TaskForm test TaskForm should match snapshot 1`] = `
     className="sc-bdnxRM kWHvNM"
   >
     <svg
-      color="#8683a0"
+      color="#c0bad2"
       fill="none"
-      height={30}
+      height={28}
       stroke="currentColor"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth="2"
       style={
         Object {
-          "color": "#8683a0",
+          "color": "#c0bad2",
         }
       }
       viewBox="0 0 24 24"
-      width={30}
+      width={28}
       xmlns="http://www.w3.org/2000/svg"
     >
       <line
@@ -38,7 +38,7 @@ exports[`TaskForm test TaskForm should match snapshot 1`] = `
       />
     </svg>
     <input
-      className="sc-dlnjwi enlKjQ"
+      className="sc-dlnjwi jxNCaK"
       onChange={[Function]}
       placeholder="Type your task"
       type="text"

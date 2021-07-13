@@ -9,6 +9,7 @@ import {
 import TaskForm from './TaskForm';
 import TaskItem from './TaskItem';
 import Header from '../Header/Header';
+import Loading from '../Loader/Loader';
 import { Container } from './styles'
 
 function Task() {
@@ -39,7 +40,7 @@ function Task() {
         <Container>
             <Header />
             <TaskForm />
-            {tasks.loading && 'Loading...'}
+            {tasks.loading && <Loading />}
             {tasks && tasks?.tasks?.sort(compare)?.map((task, index) => (
                 <TaskItem task={task} key={index} deleteTask={deleteTask} />
             ))}

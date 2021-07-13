@@ -13,16 +13,16 @@ exports[`Header test Header should match snapshot 1`] = `
       <p
         className="sc-eCApnc iFHYB"
       >
-        Sunday,
+        Monday,
       </p>
       <p
         className="sc-eCApnc bghzsz"
       >
-         11th
+         12th
       </p>
     </div>
     <p
-      className="sc-gKAaRy ldhcgQ"
+      className="sc-gKAaRy jdnLDq"
     >
       July
     </p>
@@ -37,7 +37,7 @@ exports[`Header test Header should match snapshot 1`] = `
        Tasks
     </span>
     <p
-      className="sc-gtsrHT kFyifo"
+      className="sc-gtsrHT kFyifo clear"
       onClick={[Function]}
     >
       Clear List

@@ -6,20 +6,21 @@ exports[`TaskItem test TaskItem should match snapshot 1`] = `
   onClick={[Function]}
 >
   <div
-    className="sc-iCoGMd bCJsug"
+    className="sc-gKAaRy kioxeA"
   >
     <div
       checked={false}
-      className="sc-gKAaRy lqKOd"
+      className="sc-jSFjdj egBuVt"
     />
   </div>
   <p
-    className="sc-pNWdM emhvAE"
+    checked={false}
+    className="sc-fujyAs clfZMC"
   />
   <span
-    className="sc-jrsJWt kividw"
+    className="sc-pNWdM fNELWa"
   >
-    7:07 pm
+    4:07 pm
   </span>
 </div>
 `;

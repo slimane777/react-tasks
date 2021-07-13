@@ -11,7 +11,7 @@ exports[`ClearButton test ClearButton should match snapshot 1`] = `
      Tasks
   </span>
   <p
-    className="sc-bdnxRM ckcDZN"
+    className="sc-bdnxRM ckcDZN clear"
     onClick={[Function]}
   >
     Clear List

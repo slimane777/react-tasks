@@ -24,11 +24,12 @@ export const Input = styled.input`
     font-weight: 700;
     outline: none;
     ::placeholder { 
-        color: #8683a0;
+        color: #c0bad2;
         opacity: 0.8; 
         font-weight: 600;
     };
-    height: 30px;
+    height: 26px;
+    margin-left: 15px;
     flex: 1
 `;
 

@@ -12,7 +12,7 @@ Enzyme.configure({ adapter: new Adapter() });
 describe('ClearButton test', () => {
   const initialState = {tasks:{tasks: []}}
   const mockStore = configureStore()
-  let store,wrapper
+  let store
 
   it('ClearButton should match snapshot', () => {
     store = mockStore(initialState)
@@ -22,13 +22,12 @@ describe('ClearButton test', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  // it('simulates click events', () => {
-  //   const mockCallBack = sinon.spy();
-  //   const button = shallow(<Provider store={store} ><ClearButton onClick={mockCallBack}
-  //     /></Provider>);
+  it('simulates click events', () => {
+    const mockCallBack = sinon.spy();
 
-  //     button.find('.clear').simulate('click');
-  //   expect(mockCallBack).toHaveProperty('callCount', 1);
-  // });
+      const wrapper = shallow(<Provider store={store}><ClearButton onClick={mockCallBack} /></Provider>)
+      wrapper.find(ClearButton).simulate('click')
+      expect(mockCallBack).toHaveProperty('callCount', 1)
+  });
 
 });

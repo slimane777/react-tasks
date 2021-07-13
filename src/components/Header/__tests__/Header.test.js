@@ -7,7 +7,7 @@ import configureStore from 'redux-mock-store'
 describe('Header test', () => {
   const initialState = {tasks:{tasks: []}}
   const mockStore = configureStore()
-  let store,wrapper
+  let store
 
   it('Header should match snapshot', () => {
     store = mockStore(initialState)

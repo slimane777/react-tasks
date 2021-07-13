@@ -13,12 +13,12 @@ exports[`Header test Header should match snapshot 1`] = `
       <p
         className="sc-eCApnc iFHYB"
       >
-        Monday,
+        Tuesday,
       </p>
       <p
         className="sc-eCApnc bghzsz"
       >
-         12th
+         13th
       </p>
     </div>
     <p

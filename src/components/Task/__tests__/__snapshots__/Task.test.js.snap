@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Task test Task should match snapshot 1`] = `
+<div
+  className="sc-gtsrHT kRtws"
+>
+  <div
+    className="sc-jrsJWt cwRHXg"
+  >
+    <div
+      className="sc-hBMUJo hTiYPD"
+    >
+      <div
+        className="sc-bqGGPW fogQeo"
+      >
+        <p
+          className="sc-dIsUp gGxXqc"
+        >
+          Tuesday,
+        </p>
+        <p
+          className="sc-dIsUp hDZOKa"
+        >
+           13th
+        </p>
+      </div>
+      <p
+        className="sc-ksluID jPhkaV"
+      >
+        July
+      </p>
+    </div>
+    <div
+      className="sc-crzoAE kNGeWW"
+    >
+      <span
+        className="sc-iqAclL ctYqig"
+      >
+        0
+         Tasks
+      </span>
+      <p
+        className="sc-kEqXSa iWmGyP clear"
+        onClick={[Function]}
+      >
+        Clear List
+      </p>
+    </div>
+  </div>
+  <form
+    onSubmit={[Function]}
+  >
+    <div
+      className="sc-bdnxRM kWHvNM"
+    >
+      <svg
+        color="#c0bad2"
+        fill="none"
+        height={28}
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        style={
+          Object {
+            "color": "#c0bad2",
+          }
+        }
+        viewBox="0 0 24 24"
+        width={28}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="12"
+          x2="12"
+          y1="5"
+          y2="19"
+        />
+        <line
+          x1="5"
+          x2="19"
+          y1="12"
+          y2="12"
+        />
+      </svg>
+      <input
+        className="sc-dlnjwi jxNCaK"
+        onChange={[Function]}
+        placeholder="Type your task"
+        type="text"
+      />
+    </div>
+  </form>
+</div>
+`;

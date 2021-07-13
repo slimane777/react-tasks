@@ -8,14 +8,14 @@ import {
     CLEAR_TASK_TITLE
   } from '../actions/tasks'
   
-  // Define your state here
+  // Define state here
   const initialState = {
     loading: false,
     tasks: [],
     title: ''
   }
   
-  // This export default will control your state for your application
+  // This export default will control state for your application
  const taskReducer = (state = initialState, {type, payload}) => {
     switch(type) {
       // Set loading
@@ -31,7 +31,7 @@ import {
           tasks: payload,
           loading: false
         }
-      // Set TASK title from user that gonna input a title in form
+      // Set task title input 
       case SET_TASK_TITLE:
         return {
           ...state,
@@ -63,7 +63,7 @@ import {
       tasks: state.tasks.filter(task => task.id !== payload),
       loading: false
         }
-      // Return default state if you didn't match any case
+      // Return default state if didn't match any case
       default:
         return state
     }

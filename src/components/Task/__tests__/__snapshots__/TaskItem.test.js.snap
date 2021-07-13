@@ -9,18 +9,29 @@ exports[`TaskItem test TaskItem should match snapshot 1`] = `
     className="sc-gKAaRy kioxeA"
   >
     <div
-      checked={false}
-      className="sc-jSFjdj egBuVt"
-    />
+      checked={true}
+      className="sc-jSFjdj bvyQBQ"
+    >
+      <svg
+        className="sc-iCoGMd fAZMah"
+        viewBox="0 0 24 24"
+      >
+        <polyline
+          points="20 6 9 17 4 12"
+        />
+      </svg>
+    </div>
   </div>
   <p
-    checked={false}
-    className="sc-fujyAs clfZMC"
-  />
+    checked={true}
+    className="sc-fujyAs dJAvq"
+  >
+    title
+  </p>
   <span
     className="sc-pNWdM fNELWa"
   >
-    4:07 pm
+    5:07 pm
   </span>
 </div>
 `;

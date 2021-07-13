@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import PropTypes from 'prop-types'
 import { useDispatch, useSelector } from 'react-redux'
 import {
   GET_TASKS_REQUESTED,
@@ -18,10 +17,7 @@ function Task() {
     
     const dispatch = useDispatch();
 
-    const deleteTask = (id) => dispatch({ type: DELETE_TASK_REQUESTED, payload: id })
-
     useEffect(() => {
-        console.log({tasks})
         const getTasks = () => dispatch({ type: GET_TASKS_REQUESTED })
         getTasks()
     }, [])
@@ -42,15 +38,10 @@ function Task() {
             <TaskForm />
             {tasks.loading && <Loading />}
             {tasks && tasks?.tasks?.sort(compare)?.map((task, index) => (
-                <TaskItem task={task} key={index} deleteTask={deleteTask} />
+                <TaskItem task={task} key={index} />
             ))}
         </Container>
     )
-}
-
-Task.propTypes = {
-  loading: PropTypes.bool,
-  tasks: PropTypes.array,
 }
 
 export default Task

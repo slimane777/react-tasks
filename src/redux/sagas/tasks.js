@@ -15,7 +15,7 @@ import {
     CLEAR_TASK_TITLE,
     CREATE_TASK,
     CREATE_TASK_REQUESTED,
-    UPDATE_TASK,
+    // UPDATE_TASK,
     UPDATE_TASK_REQUESTED,
     DELETE_TASK,
     DELETE_TASK_REQUESTED
@@ -62,7 +62,7 @@ import {
       
         yield call(updateExistingTask, payload)
       
-        // yield put({ type: UPDATE_TASK, payload: updatedTask })
+        // yield put({ type: UPDATE_TASK, payload: [] })
 
     }
   

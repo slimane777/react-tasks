@@ -25,7 +25,6 @@ function TaskItem({ task }) {
           completed: !task.completed, 
           dateOfComplete: moment(new Date())
         }
-        console.log({obj})
         updateTask(obj)
       }}
     >

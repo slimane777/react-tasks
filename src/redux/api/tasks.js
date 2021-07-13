@@ -9,7 +9,7 @@ const axios = defaultAxios.create({
 export const getAllTasks = async () => {
   try {
     const tasks = await axios.get('tasks')
-
+    console.log({tasks})
     return tasks.data
   } catch(err) {
     return console.error(err)
@@ -49,11 +49,9 @@ export const updateExistingTask = async (taskObj) => {
 export const deleteExistedTask = async (ids) => {
 
     try {
-
     ids.map(async (id)=>{
         await axios.delete(`tasks/${id}`)
     })
-    
     return ids
   } catch(err) {
      return console.error({err})

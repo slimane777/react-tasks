@@ -18,8 +18,6 @@ function TaskForm() {
     const createTask = (title) => dispatch({ type: CREATE_TASK_REQUESTED, payload: title });
 
   const onChange = (e) => {
-    console.log({e})
-    console.log(e.target.value)
     setTaskTitle(e.target.value)
   }
 

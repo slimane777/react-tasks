@@ -7,7 +7,7 @@ const Loading = () => {
   return (
     <Wrapper>
       <Loader
-        type="Puff"
+        type="Oval"
         color="#5554e7"
         height={30}
         width={30}

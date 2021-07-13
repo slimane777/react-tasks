@@ -2,10 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 Clone the repos:
-#### git clone https://github.com/slimane777/react-tasks.git
+#### `git clone https://github.com/slimane777/react-tasks.git`
 
 In the project directory, you can run:
 
